@@ -260,7 +260,5 @@ void StayOrExit() {
   } else if (ask != '1' && ask != '2') {
     print('Invalid value');
     return StayOrExit();
-  } else {
-    return StayOrExit();
   }
 }
