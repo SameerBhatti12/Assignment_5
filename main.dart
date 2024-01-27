@@ -20,15 +20,15 @@ void Category() {
   } else if (input1 == '2') {
     timeconversion();
   } else if (input1 == '3') {
-    lengthconversion();
+    lengthConversion();
   } else if (input1 == '') {
     print('Please enter a valid value');
-    return Category();
+    Category();
   } else if (input1 != '1' && input1 != '2' && input1 != '3') {
     print('Invalid value');
-    return Category();
+    Category();
   } else {
-    return Category();
+    Category();
   }
 }
 
@@ -45,14 +45,14 @@ void tempconversion() {
     CtoF();
   } else if (input2 == '') {
     print('Please enter a valid value');
-    return tempconversion();
+    tempconversion();
   } else if (input2 != '1' && input2 != '2') {
     print('Invalid value');
-    return tempconversion();
+    tempconversion();
   } else {
-    return tempconversion();
+    tempconversion();
   }
-  StayOrExit();
+  stayOrExit();
 }
 
 void FtoC() {
@@ -101,7 +101,7 @@ void timeconversion() {
     MstoH();
   } else if (input3 == '') {
     print('Please enter a valid value');
-    return timeconversion();
+    timeconversion();
   } else if (input3 != '1' &&
       input3 != '2' &&
       input3 != '3' &&
@@ -109,11 +109,11 @@ void timeconversion() {
       input3 != '5' &&
       input3 != '6') {
     print('Invalid value');
-    return timeconversion();
+    timeconversion();
   } else {
-    return timeconversion();
+    timeconversion();
   }
-  StayOrExit();
+  stayOrExit();
 }
 
 void StoM() {
@@ -158,7 +158,7 @@ void MstoH() {
   print('Hour(s) passed: $H');
 }
 
-void lengthconversion() {
+void lengthConversion() {
   print('OK! So, In which unit you want to convert?');
   Map length = {
     1: 'Meter to kilometers',
@@ -173,7 +173,7 @@ void lengthconversion() {
   });
   var input4 = stdin.readLineSync();
   if (input4 == '1') {
-    MtoK();
+    meterToKilometer();
   } else if (input4 == '2') {
     KtoM();
   } else if (input4 == '3') {
@@ -186,7 +186,7 @@ void lengthconversion() {
     MtoCm();
   } else if (input4 == '') {
     print('Please enter a valid value');
-    return lengthconversion();
+    lengthConversion();
   } else if (input4 != '1' &&
       input4 != '2' &&
       input4 != '3' &&
@@ -194,14 +194,14 @@ void lengthconversion() {
       input4 != '5' &&
       input4 != '6') {
     print('Invalid value');
-    return lengthconversion();
+    lengthConversion();
   } else {
-    return lengthconversion();
+    lengthConversion();
   }
-  StayOrExit();
+  stayOrExit();
 }
 
-void MtoK() {
+void meterToKilometer() {
   print('Enter a value');
   int M = int.parse(stdin.readLineSync()!);
   double K = M * 1000;
@@ -243,7 +243,7 @@ void MtoCm() {
   print('Length in Centimeter(s) is: $cm');
 }
 
-void StayOrExit() {
+void stayOrExit() {
   print('Do you want to continue?');
   Map SorE = {1: 'Yes', 2: 'No'};
   SorE.forEach((key, value) {
@@ -256,11 +256,11 @@ void StayOrExit() {
     print('Exit');
   } else if (ask == '') {
     print('Please enter a valid value');
-    return StayOrExit();
+    stayOrExit();
   } else if (ask != '1' && ask != '2') {
     print('Invalid value');
-    return StayOrExit();
+    stayOrExit();
   } else {
-    return StayOrExit();
+    stayOrExit();
   }
 }
